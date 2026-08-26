@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: zorg-bot
+    env: python
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python zorg_bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: SOLANA_PRIVATE_KEY
+        sync: false
+      - key: SOLANA_PUBLIC_KEY
+        sync: false
+      - key: ETH_PRIVATE_KEY
+        sync: false
+      - key: ETH_PUBLIC_KEY
+        sync: false
+      - key: BSC_PRIVATE_KEY
+        sync: false
+      - key: BSC_PUBLIC_KEY
+        sync: false
+      - key: POLYGON_PRIVATE_KEY
+        sync: false
+      - key: POLYGON_PUBLIC_KEY
+        sync: false
